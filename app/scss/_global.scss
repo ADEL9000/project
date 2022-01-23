@@ -1,0 +1,15 @@
+body{
+  @extend %rubik-400;
+  background-color: green;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.container{
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
