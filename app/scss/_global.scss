@@ -1,6 +1,17 @@
+html,
 body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
   @extend %rubik-400;
-  background-color: green;
+  background-color: #ccc;
+}
+
+.main{
+  flex-grow: 1;
 }
 
 a{
@@ -12,4 +23,7 @@ a{
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+  &--min{
+    max-width: 1200px;
+  }
 }
