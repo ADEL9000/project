@@ -26,3 +26,10 @@ a{
     max-width: 1200px;
   }
 }
+
+.title{
+  @extend %dm-700;
+  font-size: 36px;
+  line-height: 46px;
+  color: #191919;
+}
