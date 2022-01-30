@@ -120,6 +120,15 @@
     color: #1f2044;
     text-transform: uppercase;
   }
+  &__list-item{
+    line-height: 20px;
+  }
+  &__list-item + &__list-item{
+    margin-top: 15px;
+  }
+  &__list-link{
+    word-wrap: break-word;
+  }
   &__item-text{
     padding-top: 4px;
     margin-bottom: 34px;
@@ -382,40 +391,28 @@
 .products-box{
   margin-bottom: 100px;
   &__inner{
+    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
   }
   &__item{
     display: flex;
-    justify-content: center;
-    padding: 0 10px;
+    min-height: 390px;
+    padding: 10px;
+    background-color: #feefe2;
     position: relative;
-    z-index: 1;
-    &::before{
-      position: absolute;
-      content: '';
-      height: 390px;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #feefe2;
-      z-index: -1;
-    }
-  }
-  &__item-inner{
-    display: flex;
-    align-items: flex-end;
-    max-width: 590px;
   }
   &__img{
-    margin-bottom: 80px;
-    margin-right: 30px;
+    position: absolute;
+    top: -100px;
+    right: 500px;
   }
   &__info{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: auto;
     max-width: 345px;
     height: 390px;
     color: #243f4d;
@@ -462,7 +459,10 @@
     position: relative;
     overflow: hidden;
     border-radius: 5px 5px 0 0;
-    background-color: red;
+    transition: all .3s;
+    &:hover{
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
+    }
   }
   &__info{
     position: absolute;
@@ -520,6 +520,9 @@
     width: 100%;
   }
   &__item-info{
+    display: flex;
+    flex-direction: column;
+    min-height: 170px;
     padding: 30px 25px 25px 35px;
     position: relative;
   }
@@ -537,29 +540,47 @@
     color: #fff;
     text-transform: uppercase;
   }
-  &__item-text{
-    min-height: 60px;
+  &__item-link{
+    margin-bottom: auto;
     @extend %dm-700;
     font-size: 18px;
     line-height: 20px;
     color: #262626;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
   }
   &__item-date-author-box{
     display: flex;
     font-size: 12px;
     line-height: 16px;
     color: #222933;
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  &__item-date{
+    padding-left: 18px;
+    position: relative;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url('../images/icons/calendar.jpg');
+    }
   }
   &__item-author{
+    padding-left: 16px;
+    position: relative;
     margin-left: 30px;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url('../images/icons/user.jpg');
+    }
   }
 }
 
 .partners{
-  margin-top: -167px;
+  margin-top: -170px;
   padding: 270px 0 90px;
   background-color: #fef7f0;
   &__list{
