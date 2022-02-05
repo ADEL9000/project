@@ -1310,32 +1310,28 @@
     text-decoration: underline;
   }
   .jq-number{
-    padding: 0;
+    position: relative;
   }
   .jq-number__field{
-    min-width: 148px;
+    width: 148px;
     border: 1px solid #a3bbc8;
-    border-bottom-color: none;
-    border-radius: 0;
-    box-shadow: none;
   }
   .jq-number__field input{
+    width: 100%;
+    border: none;
     text-align: center;
-    padding: 18px 50px;
+    padding: 17px 50px;
     @extend %rubik-400;
     font-size: 15px;
     line-height: 17px;
     color: #333;
   }
   .jq-number__spin{
+    position: absolute;
     top: 0;
     bottom: 0;
-    height: auto;
     width: 50px;
-    border: none;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
+    cursor: pointer;
     &::after{
       display: none;
     }
@@ -1344,22 +1340,21 @@
       display: inline-block;
       top: 50%;
       left: 50%;
+      transform: translate(-50%, -10px);
     }
   }
   .jq-number__spin.minus{
     left: 0;
-    right: auto;
     border-right: 1px solid #a3bbc8;
     &::before{
       content: '-';
-      transform: translate(-50%, -60%);
     }
   }
   .jq-number__spin.plus{
+    right: 0;
     border-left: 1px solid #a3bbc8;
     &::before{
       content: '+';
-      transform: translate(-50%, -52%);
     }
   }
 }
