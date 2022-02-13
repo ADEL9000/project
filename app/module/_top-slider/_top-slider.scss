@@ -1,0 +1,82 @@
+.top-slider{
+  &__inner{
+    overflow: hidden;
+    background-color: #fcd7b6;
+    position: relative;
+    z-index: 1;
+    &::after{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(70px, -50%);
+      content: '';
+      width: 634px;
+      height: 634px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff);
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+  &__items{
+    z-index: 10;
+    padding-bottom: 45px;
+  }
+  &__item{
+    padding: 217px 0 206px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__title{
+    max-width: 470px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    margin-bottom: 24px;
+  }
+  &__text{
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    margin-bottom: 38px;
+  }
+  &__btn{
+    display: inline-block;
+    padding: 24px 28px;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #a3bbc8;
+    &::after{
+      content: url('../images/icons/arrow-right.svg');
+      margin-left: 50px;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    li + li{
+      margin-left: 10px;
+    }
+    button{
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+      border: none;
+      background-color: #fde3cc;
+      @extend %rubik-500;
+      font-size: 11px;
+      line-height: 9px;
+      color: #243f4d;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .slick-active button{
+      background-color: #fff;
+    }
+  }
+}

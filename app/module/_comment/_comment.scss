@@ -1,0 +1,72 @@
+.comment{
+  &__title{
+    @extend %rubik-700;
+    font-size: 24px;
+    color: #436372;
+    margin-bottom: 45px;
+  }
+  &__input-box{
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+  &__input,
+  &__textarea{
+    display: inline-block;
+    padding: 12px 50px 12px 20px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    outline: none;
+    position: relative;
+    &::placeholder{
+      color: #999;
+    }
+    &:focus{
+      border-color: #a3bbc8;
+    }
+  }
+  &__label,
+  &__textarea-wrapper{
+    position: relative;
+    &::before{
+      position: absolute;
+      top: 16px;
+      right: 21px;
+    }
+    &--name{
+      &::before{
+        content: url('../images/icons/input-name.svg');
+      }
+    }
+    &--email{
+      &::before{
+        content: url('../images/icons/input-email.svg');
+      }
+    }
+  }
+  &__textarea-wrapper{
+    margin-bottom: 40px;
+    &::before{
+      content: url('../images/icons/comment.svg');
+    }
+  }
+  &__textarea{
+    resize: none;
+    min-height: 120px;
+  }
+  &__btn{
+    padding: 15px 42px;
+    border: none;
+    background-color: #a3bbc8;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

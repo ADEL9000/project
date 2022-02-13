@@ -1,0 +1,32 @@
+.benefits{
+  margin-bottom: 68px;
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
+    background-color: #e8e4df;
+  }
+  &__item{
+    padding: 37px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef7f0;
+  }
+  &__icon{
+    margin-right: 25px;
+  }
+  &__title{
+    @extend %dm-700;
+    font-size: 18px;
+    line-height: 36px;
+    color: #414141;
+  }
+  &__subtitle{
+    max-width: 215px;
+    @extend %dm-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #585858;
+  }
+}

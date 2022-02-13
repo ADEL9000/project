@@ -1,0 +1,46 @@
+.blog-page{
+  margin: 120px 0;
+  &__inner{
+    display: flex;
+    margin-bottom: 76px;
+  }
+}
+
+.blog{
+  width: 830px;
+  &__item + &__item{
+    margin-top: 51px;
+  }
+  &__top{
+    position: relative;
+    margin-bottom: 28px;
+  }
+  &__link-title{
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__title{
+    @extend %rubik-400;
+    font-size: 36px;
+    color: #333;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin-bottom: 30px;
+  }
+  &__link-more{
+    display: inline-flex;
+    align-items: center;
+    padding: 19px;
+    border: 1px solid #a3bbc8;
+    @extend %nunito-700;
+    font-size: 15px;
+    color: #a3bbc8;
+    &::after{
+      content: url('../images/icons/arrow-right-blue-wight.svg');
+      margin-left: 43px;
+    }
+  }
+}

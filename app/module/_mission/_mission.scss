@@ -1,0 +1,73 @@
+.mission{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    color: #243f4d;
+  }
+  &__content{
+    padding-top: 80px;
+    margin-left: 48px;
+  }
+  &__number-box{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+    span{
+      @extend %rubik-700;
+      font-size: 140px;
+      line-height: 110px;
+      color: #a3bbc8;
+      margin-right: 25px;
+    }
+  }
+  &__number-text{
+    line-height: 30px;
+  }
+  &__title{
+    @extend %dm-700;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+  &__text{
+    line-height: 30px;
+  }
+  &__info{
+    display: flex;
+    position: relative;
+    margin-top: 60px;
+    padding-top: 40px;
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      background-color: #ebeef3;
+      max-width: 500px;
+      width: 100%;
+      height: 2px;
+    }
+  }
+  &__info-item{
+    display: flex;
+    padding: 10px 0 11px;
+  }
+  &__info-item + &__info-item{
+    padding-left: 28px;
+    margin-left: 28px;
+    border-left: 1px solid #e6eaf0;
+  }
+  &__info-img{
+    margin-right: 18px;
+  }
+  &__info-text{
+    @extend %dm-700;
+    color: #4c4c4c;
+    span{
+      display: block;
+      font-size: 36px;
+      line-height: 38px;
+      color: #243f4d;
+    }
+  }
+}

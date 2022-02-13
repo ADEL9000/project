@@ -1,0 +1,73 @@
+.blog-aside{
+  width: 270px;
+  margin-left: 70px;
+}
+
+.blog-search{
+  position: relative;
+  width: 100%;
+  margin-bottom: 54px;
+  &__input{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #edf1f4;
+    background-color: transparent;
+    padding: 10px 50px 10px 10px;
+  }
+  &__btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    cursor: pointer;
+  }
+}
+
+.blog-category{
+  margin-bottom: 42px;
+}
+
+.recent-posts{
+  &__item{
+    display: flex;
+  }
+  &__item + &__item{
+    margin-top: 22px;
+  }
+  &__img-link{
+    min-width: 71px;
+    margin-right: 20px;
+  }
+  &__img{
+    width: 71px;
+    height: 71px;
+    object-fit: contain;
+  }
+  &__title{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  &__date{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #9a9a9a;
+    padding-left: 18px;
+    position: relative;
+    &::before{
+      position: absolute;
+      line-height: 0;
+      content: url('../images/icons/calendar.svg');
+      top: 0;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.team{
+  padding: 120px 0 70px;
+  &__inner{
+    display: flex;
+    color: #243f4d;
+  }
+  &__info{
+    width: 300px;
+    margin-right: 100px;
+  }
+  &__title{
+    @extend %dm-700;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 27px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 14px 17px;
+    background-color: #a3bbc8;
+    border-radius: 5px;
+    @extend %poppins-600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+    &::after{
+      display: inline-block;
+      content: url('../images/icons/arrow-right-white.svg');
+      margin-left: 27px;
+    }
+  }
+  &__items{
+    max-width: 770px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  &__item{
+    height: 320px;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  &__item-info{
+    position: absolute;
+    left: 0;
+    right: 45px;
+    bottom: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 21px 28px 24px;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+  &__name{
+    @extend %dm-700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #436372;
+    margin-bottom: 7px;
+  }
+  &__prof{
+    color: #565872;
+  }
+  &__social{
+    display: flex;
+  }
+  &__social-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+  }
+  &__social-link + &__social-link{
+    margin-left: 7px;
+  }
+}

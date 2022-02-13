@@ -1,0 +1,32 @@
+.top{
+  padding: 36px 0 28px;
+  background-color: #edf1f4;
+  color: #222933;
+  &__inner{
+    text-align: center;
+  }
+  &__title{
+    display: block;
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+    margin-bottom: 13px;
+  }
+}
+
+.breadcrumbs{
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item + &__item{
+    &::before{
+      display: inline-block;
+      content: '/';
+      width: 22px;
+    }
+  }
+}

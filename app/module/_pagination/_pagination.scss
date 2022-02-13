@@ -1,0 +1,34 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  &--left{
+    justify-content: flex-start;
+  }
+  &__arrow,
+  &__link{
+    line-height: 20px;
+    color: #243f4d;
+    display: inline-block;
+    padding: 14px 21px;
+    border: 1px solid #a3bbc8;
+  }
+  &__link--active{
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+  &__list{
+    display: flex;
+  }
+  &__arrow-prev{
+    margin-right: 16px;
+  }
+  &__arrow-next{
+    margin-left: 16px;
+  }
+  &__arrow--disabled{
+    display: none;
+  }
+  &__item + &__item{
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,106 @@
+.blog-one{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+  }
+  &__item{
+    width: 830px;
+  }
+  &__top{
+    position: relative;
+    margin-bottom: 24px;
+  }
+  &__content{
+    margin-bottom: 50px;
+    h2{
+      @extend %rubik-400;
+      font-size: 36px;
+      color: #333333;
+      margin: 10px 0;
+    }
+    h4{
+      @extend %rubik-500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #243f4d;
+      margin: 10px 0;
+    }
+    p{
+      font-size: 16px;
+      line-height: 30px;
+      color: #565872;
+      margin: 10px 0;
+    }
+    .blog-one__img-left{
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    .blog-one__img-right{
+      float: right;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &__author{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0 26px;
+    margin-bottom: 62px;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+  }
+  &__author-left{
+    display: flex;
+    align-items: center;
+  }
+  &__avatar-link{
+    margin-right: 29px;
+  }
+  &__avatar{
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+  }
+  &__author-name{
+    @extend %rubik-500;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  &__author-prof{
+    color: #666;
+  }
+  &__author-right{
+    min-width: 210px;
+    color: #666;
+    span{
+      color: #333;
+    }
+  }
+  &__author-tags{
+    margin-bottom: 12px;
+    span{
+      margin-right: 32px;
+    }
+  }
+  &__tags-link{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__author-share{
+    display: flex;
+    align-items: center;
+    span{
+      margin-right: 22px;
+    }
+  }
+  &__share-link{
+    display: flex;
+  }
+  &__share-link + &__share-link{
+    margin-left: 22px;
+  }
+}

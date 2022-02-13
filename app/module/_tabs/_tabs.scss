@@ -1,0 +1,38 @@
+.tabs{
+  margin-bottom: 110px;
+  &__top{
+    display: flex;
+    justify-content: center;
+    margin: 0 91px 28px 0;
+  }
+  &__top-item{
+    min-width: 240px;
+    text-align: center;
+    padding: 17px 10px;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 19px;
+    color: #243f4d;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    transition: all .3s;
+    &--active{
+      color: #fff;
+      background-color: #a3bbc8;
+    }
+  }
+  &__top-item + &__top-item{
+    margin-left: 13px;
+  }
+  &__content-item{
+    display: none;
+    &--active{
+      display: block;
+    }
+  }
+  &__content-item-text{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+  }
+}
