@@ -1,0 +1,77 @@
+.comments{
+  margin-bottom: 84px;
+  &__title{
+    @extend %rubik-700;
+    font-size: 24px;
+    color: #436372;
+    margin-bottom: 54px;
+  }
+  &__item{
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 0;
+      width: 700px;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+    &:last-child{
+      padding: 0;
+      margin: 0;
+      &::after{
+        display: none;
+      }
+    }
+    &--replied{
+      padding-left: 130px;
+    }
+  }
+  &__avatar-link{
+    margin-right: 30px;
+  }
+  &__avatar{
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  &__author{
+    @extend %rubik-700;
+    color: #436372;
+  }
+  &__date{
+    font-size: 14px;
+    color: #9e9e9e;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+    margin-bottom: 8px;
+  }
+  &__reply{
+    display: inline-flex;
+    align-items: center;
+    padding-right: 18px;
+    font-size: 14px;
+    color: #516278;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: url('../images/icons/arrow-right-long.svg');
+      top: 2px;
+      right: 0;
+    }
+  }
+}

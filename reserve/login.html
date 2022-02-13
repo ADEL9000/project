@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee.</title>
-  <link rel="stylesheet" href="css/index.min.css">
+  <title>Log in</title>
+  <link rel="stylesheet" href="css/login.min.css">
 </head>
 
 <body>
@@ -57,10 +57,50 @@
 </header>
 
   <main class="main">
-    
+    <section class="top">
+  <div class="container">
+    <div class="top__inner">
+      <h2 class="top__title">Log in</h2>
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Home</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="modal">
+  <div class="container">
+    <form class="modal__form" action="#">
+      <div class="modal__label-box">
+        <label class="modal__label">
+          Useraname or email address *
+          <input class="modal__input" type="text" required>
+        </label>
+        <label class="modal__label">
+          Password *
+          <input class="modal__input" type="text" required>
+        </label>
+      </div>
+      <button class="modal__btn">Login</button>
+      <div class="modal__box">
+        <label class="modal__label-checkbox">
+          <input class="modal__checkbox" type="checkbox">
+          <span class="modal__checkbox-style"></span>
+          Remember me
+        </label>
+        <a class="modal__lost" href="#">Lost your password?</a>
+      </div>
+      <p class="modal__text">Not registered? No problem</p>
+      <a class="modal__link" href="#">Create an account</a>
+    </form>
+  </div>
+</div>
   </main>
+
   <footer class="footer">
-  <div class="partners partners--high">
+  <div class="partners">
     <div class="container container--min">
       <ul class="partners__list">
         <li class="partners__item"><img class="partners__img" src="images/partners/1.png" alt="partners logo"></li>

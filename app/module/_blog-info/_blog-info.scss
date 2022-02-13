@@ -1,0 +1,34 @@
+.blog-info{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  padding: 28px 28px 28px 23px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #a3bbc8;
+  &__date{
+    margin-right: 25px;
+    position: relative;
+    padding-left: 18px;
+    &::before{
+      position: absolute;
+      content: url('../images/icons/calendar-wight.svg');
+      top: 0;
+      left: 0;
+      line-height: 0;
+    }
+  }
+  &__author{
+    position: relative;
+    padding-left: 18px;
+    &::before{
+      position: absolute;
+      content: url('../images/icons/user.svg');
+      top: 0;
+      left: 0;
+      line-height: 0;
+    }
+  }
+}

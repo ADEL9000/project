@@ -1,0 +1,91 @@
+.filters{
+  width: 270px;
+  color: #243f4d;
+  &__title{
+    display: inline-block;
+    padding-right: 55px;
+    margin-bottom: 25px;
+    @extend %dm-700;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 3px;
+      background-color: #a3bbc8;
+      border: 1px solid #c8d6de;
+      border-radius: 2px;
+    }
+  }
+}
+
+.filter{
+  &__label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 23px 11px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  &__label-span{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all .3s;
+  }
+  &__checkbox{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    &:checked + .filter__label-span{
+      background-color: #edf1f4;
+    }
+  }
+}
+
+.filters-category{
+  margin-bottom: 60px;
+  &__label{
+    &::after{
+      content: url('../images/icons/arrow-right-short.svg');
+    }
+  }
+}
+
+.filters-brand{
+  margin-bottom: 50px;
+  &__label{
+    padding-right: 10px;
+  }
+  &__num{
+    min-width: 55px;
+    text-align: center;
+  }
+}
+
+.filters-price{
+  margin-bottom: 74px;
+  &__form{
+    padding-top: 5px;
+  }
+  &__prices{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+}
