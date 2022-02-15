@@ -113,8 +113,7 @@
 @media(max-width: 1200px){
   .partners{
     &--high{
-      margin-top: 0;
-      padding: 83px 0;
+      padding: 253px 0 83px;
     }
     &__list{
       display: grid;
@@ -146,7 +145,7 @@
 @media(max-width: 640px){
   .partners{
     &--high{
-      padding: 40px 0;
+      padding: 210px 0 40px;
     }
     &__list{
       grid-template-columns: repeat(2, 1fr);
