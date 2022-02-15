@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product list 1</title>
+  <link rel="stylesheet" href="css/product-list-1.min.css">
+</head>
+
+<body>
+
+  {% include 'app/module/_header/_header.html' %}
+
+  <main class="main">
+    {% include 'app/module/_top/_top product-list-1.html' %}
+    <section class="product">
+      <div class="container container--min">
+        <div class="product__inner">
+          <div class="filters">
+            <div class="filters__item filters-category">
+              <h6 class="filters__title">category</h6>
+              <form class="filter__form" action="#">
+                <label class="filter__label filters-category__label">
+                  <input class="filter__checkbox" type="radio" name="category" checked>
+                  <span class="filter__label-span"></span>
+                  Chair
+                </label>
+                <label class="filter__label filters-category__label">
+                  <input class="filter__checkbox" type="radio" name="category">
+                  <span class="filter__label-span"></span>
+                  Table
+                </label>
+                <label class="filter__label filters-category__label">
+                  <input class="filter__checkbox" type="radio" name="category">
+                  <span class="filter__label-span"></span>
+                  Lamp
+                </label>
+                <label class="filter__label filters-category__label">
+                  <input class="filter__checkbox" type="radio" name="category">
+                  <span class="filter__label-span"></span>
+                  Watch
+                </label>
+                <label class="filter__label filters-category__label">
+                  <input class="filter__checkbox" type="radio" name="category">
+                  <span class="filter__label-span"></span>
+                  Clock
+                </label>
+              </form>
+            </div>
+            <div class="filters__item filters-price">
+              <h6 class="filters__title">price</h6>
+              <form class="filters-price__form" action="#">
+                <input class="filters-price__slider" type="text" data-type="double" data-min="0" data-max="999"
+                  data-from="100" data-to="500" data-grid="true" />
+                <div class="filters-price__prices">
+                  <div class="filters-price__prices-price">
+                    $<span class="filters-price__prices-from"></span>.00
+                  </div>
+                  <div class="filters-price__prices-price">
+                    $<span class="filters-price__prices-to"></span>.00
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="filters__item filters-brand">
+              <h6 class="filters__title">brand</h6>
+              <form class="filter__form" action="#">
+                <label class="filter__label filters-brand__label">
+                  <input class="filter__checkbox" type="checkbox" name="category" checked>
+                  <span class="filter__label-span"></span>
+                  RFL
+                  <span class="filters-brand__num">(10)</span>
+                </label>
+                <label class="filter__label filters-brand__label">
+                  <input class="filter__checkbox" type="checkbox" name="category">
+                  <span class="filter__label-span"></span>
+                  Brothers
+                  <span class="filters-brand__num">(21)</span>
+                </label>
+                <label class="filter__label filters-brand__label">
+                  <input class="filter__checkbox" type="checkbox" name="category">
+                  <span class="filter__label-span"></span>
+                  Regal
+                  <span class="filters-brand__num">(3)</span>
+                </label>
+                <label class="filter__label filters-brand__label">
+                  <input class="filter__checkbox" type="checkbox" name="category">
+                  <span class="filter__label-span"></span>
+                  Nadia
+                  <span class="filters-brand__num">(14)</span>
+                </label>
+                <label class="filter__label filters-brand__label">
+                  <input class="filter__checkbox" type="checkbox" name="category">
+                  <span class="filter__label-span"></span>
+                  Otobi
+                  <span class="filters-brand__num">(6)</span>
+                </label>
+              </form>
+            </div>
+            {% include 'app/module/_recent/_recent.html' %}
+          </div>
+          <div class="product__items-wrapper">
+            {% include 'app/module/_product__items/_product__items.html' %}
+            {% include 'app/module/_pagination/_pagination.html' %}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include 'app/module/_footer/_footer.html' %}
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
