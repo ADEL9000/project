@@ -32,3 +32,29 @@
     margin-left: 15px;
   }
 }
+
+@media(max-width: 1024px){
+  .pagination{
+    &--left{
+      justify-content: center;
+    }
+  }
+}
+
+@media(max-width: 512px){
+  .pagination{
+    &__arrow,
+    &__link{
+      padding: 4px 10px;
+    }
+    &__item + &__item{
+      margin-left: 5px;
+    }
+    &__arrow-prev{
+      margin-right: 5px;
+    }
+    &__arrow-next{
+      margin-left: 5px;
+    }
+  }
+}

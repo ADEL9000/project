@@ -1,6 +1,7 @@
 .blog-aside{
   width: 270px;
-  margin-left: 70px;
+  min-width: 270px;
+  margin-left: 30px;
 }
 
 .blog-search{
@@ -69,5 +70,20 @@
       top: 0;
       left: 0;
     }
+  }
+}
+
+@media(max-width: 1024px){
+  .blog-aside{
+    order: -1;
+    margin-left: 0;
+    align-self: flex-end;
+    .blog-category,
+    .recent-posts{
+      display: none;
+    }
+  }
+  .blog-search{
+    margin-bottom: 30px;
   }
 }

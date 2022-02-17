@@ -1,5 +1,5 @@
 .top{
-  padding: 36px 0 28px;
+  padding: 34px 0 26px;
   background-color: #edf1f4;
   color: #222933;
   &__inner{
@@ -9,8 +9,8 @@
     display: block;
     @extend %rubik-300;
     font-size: 36px;
-    line-height: 24px;
-    margin-bottom: 13px;
+    line-height: 36px;
+    margin-bottom: 7px;
   }
 }
 
@@ -20,6 +20,7 @@
   line-height: 24px;
   &__list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
   &__item + &__item{

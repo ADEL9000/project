@@ -2,13 +2,15 @@
   margin-bottom: 110px;
   &__top{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 0 91px 28px 0;
+    margin: 0 91px 22px 0;
   }
   &__top-item{
     min-width: 240px;
     text-align: center;
     padding: 17px 10px;
+    margin: 6px;
     @extend %rubik-500;
     font-size: 18px;
     line-height: 19px;
@@ -21,9 +23,6 @@
       background-color: #a3bbc8;
     }
   }
-  &__top-item + &__top-item{
-    margin-left: 13px;
-  }
   &__content-item{
     display: none;
     &--active{
@@ -34,5 +33,24 @@
     font-size: 16px;
     line-height: 30px;
     color: #243f4d;
+  }
+}
+
+@media(max-width: 1200px){
+  .tabs{
+    &__top{
+      margin-right: 0;
+    }
+  }
+}
+
+@media(max-width: 512px){
+  .tabs{
+    margin-bottom: 60px;
+    &__top-item{
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }

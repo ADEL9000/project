@@ -32,3 +32,23 @@
     margin-bottom: 60px;
   }
 }
+
+@media(max-width: 1024px){
+  .conditions{
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media(max-width: 768px){
+  .conditions{
+    &__title{
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    &__text-box,
+    &__list{
+      margin-bottom: 30px;
+    }
+  }
+}

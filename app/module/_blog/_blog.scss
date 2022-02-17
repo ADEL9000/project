@@ -3,17 +3,18 @@
   &__inner{
     display: flex;
     margin-bottom: 76px;
+    justify-content: space-between;
   }
 }
 
 .blog{
   width: 830px;
   &__item + &__item{
-    margin-top: 51px;
+    margin-top: 61px;
   }
   &__top{
     position: relative;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
   &__link-title{
     display: inline-block;
@@ -41,6 +42,32 @@
     &::after{
       content: url('../images/icons/arrow-right-blue-wight.svg');
       margin-left: 43px;
+    }
+  }
+}
+
+@media(max-width: 1024px){
+  .blog-page{
+    margin: 60px 0;
+    &__inner{
+      flex-direction: column;
+    }
+  }
+  .blog{
+    width: 100%;
+    &__img{
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .blog{
+    &__title{
+      font-size: 28px;
+    }
+    &__link-more{
+      padding: 12px;
     }
   }
 }
