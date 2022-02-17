@@ -1,5 +1,6 @@
 .filters{
   width: 270px;
+  min-width: 270px;
   color: #243f4d;
   &__title{
     display: inline-block;
@@ -87,5 +88,24 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+  }
+}
+
+@media(max-width: 1024px){
+  .filters{
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 300px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 0 5px 5px 0;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: 18;
+    &--active{
+      transform: translateX(0);
+    }
   }
 }

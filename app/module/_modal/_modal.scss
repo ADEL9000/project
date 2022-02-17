@@ -36,6 +36,7 @@
   }
   &__box{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 80px;
@@ -89,5 +90,11 @@
     font-size: 18px;
     color: #243f4d;
     border: 2px solid #a3bbc8;
+  }
+}
+
+@media(max-width: 768px){
+  .modal{
+    padding: 60px 0;
   }
 }
